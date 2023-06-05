@@ -1,6 +1,6 @@
 {
   "name": "F9 RTU Bot",
-  "version": "1.0.47",
+  "version": "1.0.0",
   "description": "Real Time Updater Bot",
   "author": "Marvin Rivera",
   "permissions": ["storage", "tabs", "scripting", "alarms", "notifications"],

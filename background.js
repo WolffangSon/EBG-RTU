@@ -220,8 +220,9 @@ function processData(tabId, url, sheetTab, userEmail, alarmName, refreshMins) {
               botNotifSend(
                 "warning",
                 "F9 Webapp Post Issues!",
-                "Please make sure you have a valid webapp URL."
+                "Please make sure you have a valid webapp URL." 
               );
+           
               chrome.storage.local.set({
                 errorCounter: result.errorCounter + 1,
               });
