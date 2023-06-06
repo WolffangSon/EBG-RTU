@@ -17,13 +17,13 @@ function constructData() {
   let rows = [];
   if (jQuery) {
     jQuery(
-      "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7 .f9-widget-grid-contents-left docked div"
+      "#StatView #f7808fdf-c04b-45ea-9e0b-ec8850b86db7 .f9-widget-grid-contents-left docked div "
     ).each(function (index) {
       if (rows[col] == undefined) {
         rows[col] = [];
       }
       rows[col].push($(this).text());
-      if ($(this).attr("class") == "lastCell") {
+      if ($(this).attr("class") == "f9-widget-grid-contents-center") {
         col++;
       }
     });
