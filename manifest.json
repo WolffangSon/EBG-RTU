@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.app-atl.five9.com/clients/supervisor/index.html?role=DomainSupervisor*"
+        "https://app-atl.five9.com/clients/supervisor/index.html?role=DomainSupervisor"
       ],
       "js": ["jquery-3.6.1.min.js", "content.js"]
     }

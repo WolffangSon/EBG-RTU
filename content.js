@@ -17,7 +17,11 @@ function constructData() {
   let rows = [];
   if (jQuery) {
     jQuery(
+<<<<<<< HEAD
       "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-left docked'] div"
+=======
+      "#StatView #f7808fdf-c04b-45ea-9e0b-ec8850b86db7 .f9-widget-grid-contents-left docked div "
+>>>>>>> 142a5f412035b85676fa6e8aad0bcbd5b77db881
     ).each(function (index) {
       if (rows[col] == undefined) {
         rows[col] = [];
