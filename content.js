@@ -13,15 +13,13 @@ chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
 });
 
 function constructData() {
-  let col = 0;
+  table =[]
+  //let col = 0;
   let rows = [];
+  let col = 0;
   if (jQuery) {
     jQuery(
-<<<<<<< HEAD
       "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-left docked'] div"
-=======
-      "#StatView #f7808fdf-c04b-45ea-9e0b-ec8850b86db7 .f9-widget-grid-contents-left docked div "
->>>>>>> 142a5f412035b85676fa6e8aad0bcbd5b77db881
     ).each(function (index) {
       if (rows[col] == undefined) {
         rows[col] = [];
@@ -38,3 +36,30 @@ function constructData() {
 
   return rows;
 }
+
+/*function constructData() {
+  let table = [];
+  let col = 0;
+  let row = 0;
+  if(jQuery) {
+    jQuery("#oRightPaneContent").contents().find("#adherenceListWrapper .tblItem").each(function(index) {
+      if(table[row] == undefined) {
+        table[row] = [];
+      }
+
+      table[row].push($(this).text());
+      col ++;
+
+      if(col > 7) {
+        row ++;
+        col = 0;
+      }
+    });
+  } else {
+    console.log('Error: jQuery library failed to load!');
+    return 0;
+  }
+
+  return table;
+
+}*/
