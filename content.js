@@ -37,6 +37,22 @@ function constructData() {
   return rows;
 }
 
+/*function constructTable(){
+  let table=[];
+  let col=0;
+  let row=0;
+  if (jQuery){// User name and timestamp array
+    jQuery("#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-left docked'] div")
+    if(table[row]==undefined){
+      table[row]=[];
+    }
+    table[row].push($(this).text)
+    col ++;
+    jQuery("#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center-inner'] div")
+    
+  }
+}*/
+
 /*function constructData() {
   let table = [];
   let col = 0;
