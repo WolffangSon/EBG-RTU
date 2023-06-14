@@ -24,14 +24,8 @@ function constructData() {
       if (rows[col] == undefined) {
         rows[col] = [];
       }
-      rows[col].push(
-        $(this).text() +
-          "\n" +
-          "Salto de Carro " +
-          "la Clase parent es: " +
-          $(this).attr("class")
-      );
-      if ($(this).attr("class") == "f9-widget-grid-row") {
+      rows[col].push($(this).text());
+      if ($(this).attr("class") == "f9-widget-grid-contents-center") {
         col++;
       }
     });
@@ -41,7 +35,7 @@ function constructData() {
   }
 
   return rows;
-}
+} //$('[id^="foo"]')
 
 /*function constructData() {
   let table = [];
