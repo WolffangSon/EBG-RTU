@@ -24,7 +24,9 @@ function constructData() {
       if (rows[col] == undefined) {
         rows[col] = [];
       }
-      rows[col].push($(this).text());
+      rows[col].push(
+        $(this).text() + "\n" + "La clase actual es: " + $(this).attr("class")
+      );
       if ($(this).attr("class") == "f9-widget-grid-contents-center") {
         col++;
       }
