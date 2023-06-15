@@ -16,30 +16,34 @@ function constructData() {
   var table = [];
   let row = 0;
   let col = 0;
-  
+
   if (typeof jQuery !== "undefined") {
-    jQuery("#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-left docked'] div[class='f9-widget-grid-row']")
-    .each(function(index) {
+    jQuery(
+      "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-left docked'] div[class='f9-widget-grid-row']"
+    ).each(function (index) {
       if (table[row] == undefined) {
         table[row] = [];
       }
-      
-      table[row][col].push($(this).text())// = {
-        //text: $(this).text(),
-        //class: $(this).attr("class")
-      //};
-      
+
+      //.push($(this).text());
+      table[row][col] = {
+        text: $(this).text(),
+        class: $(this).attr("class"),
+      };
+
       row++;
-      
-      if ($(this).attr("class") == "f9-widget-grid-contents-center") {
+
+      if ($(this).attr("class") == "f9-widget-grid-row") {
         col++;
       }
     });
-    
-    jQuery("#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center-inner'] div[class='f9-widget-grid-row']").each(function(index) {
-      table[0][col] = {
+
+    jQuery(
+      "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center-inner'] div[class='f9-widget-grid-row']"
+    ).each(function (index) {
+      table[row][1] = {
         text: $(this).text(),
-        class: $(this).attr("class")
+        class: $(this).attr("class"),
       };
       col++;
     });
@@ -50,8 +54,6 @@ function constructData() {
 
   return table;
 }
-
-
 
 /*function constructData() {
   table = [];
@@ -81,12 +83,10 @@ function constructData() {
   return rows;
 } */
 
-
-
-
 //$('[id^="foo"]')
 
 /*
+https://script.google.com/a/macros/noom.com/s/AKfycbw8lRty-W4KAMyBLr3MdxtCGwobVldN4tzSSiH_ydFshhZM4FnaIj6cZ4PuCiXnw75weg/exec
 https://script.google.com/a/macros/telusinternational.com/s/AKfycbwzaEro4pUxG9ftswFAY-RQVyVbI5T9zg1P4P6CTh4rJTyYefLb4nxB538mK56rGvlwYA/exec
 wolffang.son@telusinternational.com
 EBG Raw
