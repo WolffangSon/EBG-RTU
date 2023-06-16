@@ -18,7 +18,7 @@ function constructData() {
   let row = 0;
   if (jQuery) {
     jQuery(
-      "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner']"
+      "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center-inner'] div[class^='f9-widget-grid-row']"
     )
       .children()
       .each(function (index) {
@@ -26,9 +26,9 @@ function constructData() {
           rows[row] = [];
         }
         rows[row].push(
-          $(this).text() + "la clase actual es: " + $(this).attr("class")
+          $(this).text() //+ "la clase actual es: " + $(this).attr("class")
         );
-        if ($(this).attr("class").startsWith("f9-widget-grid-row")) {
+        if ($(this).attr("class")=="f9-widget-grid-cell stretch") {
           row++;
         }
       });
