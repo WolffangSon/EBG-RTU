@@ -25,7 +25,6 @@ function constructData() {
       }
       rows[row].push(
         $(this).text()
-        // + "\n" + "La clase actual es: " + $(this).attr("class")
       );
       if ($(this).attr("class").startsWith("f9-widget-grid-row")) {
         row++;
