@@ -19,9 +19,7 @@ function constructData() {
   if (jQuery) {
     jQuery(
       "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center-inner'] div[class^='f9-widget-grid-row']"
-    )
-      .children()
-      .each(function (index) {
+    ).children().each(function (index) {
         if (rows[row] == undefined) {
           rows[row] = [];
         }
@@ -32,11 +30,11 @@ function constructData() {
           row++;
         }
       });
-  } else {
+  // 2nd bucle
+    } else {
     console.log("Error: jQuery library failed to load!");
     return 0;
   }
-
   return rows;
 }
 
