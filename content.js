@@ -28,7 +28,7 @@ function constructData() {
         rows[row].push(
           $(this).text() //+ "la clase actual es: " + $(this).attr("class")
         );
-        if ($(this).attr("class")=="f9-widget-grid-cell stretch") {
+        if ($(this).attr("class") == "f9-widget-grid-cell stretch") {
           row++;
         }
       });
