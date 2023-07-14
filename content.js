@@ -17,9 +17,12 @@ function constructData() {
   let col = 0;
   let row = 0;
   if (jQuery) {
-    jQuery(
+   /* jQuery(
       "#f7808fdf-c04b-45ea-9e0b-ec8850b86db7:last div[class='f9-widget-grid-content'] div[class='f9-widget-grid-content-wrapper'] div[class='f9-widget-grid-content-inner'] div[class='f9-widget-grid-contents-center'] div[class='f9-widget-grid-contents-center-inner'] div[class^='f9-widget-grid-row']"
-    ).children().each(function (index) {
+    ).children().each(function (index) {*/
+
+    jQuery("#oRightPaneContent").contents().find("#adherenceListWrapper .tblItem").each(function(index){
+
         if (rows[row] == undefined) {
           rows[row] = [];
         }
@@ -39,7 +42,21 @@ function constructData() {
 }
 
 /*
+
+main cont: 
+f7808fdf-c04b-45ea-9e0b-ec8850b86db7
+inner class:
+f9-widget-grid-content-inner
+o
+f9-widget-grid-contents-...
+
+div
+f9-widget-grid-row...
+
+
+
 https://script.google.com/a/macros/noom.com/s/AKfycbw8lRty-W4KAMyBLr3MdxtCGwobVldN4tzSSiH_ydFshhZM4FnaIj6cZ4PuCiXnw75weg/exec
 https://script.google.com/a/macros/telusinternational.com/s/AKfycbwzaEro4pUxG9ftswFAY-RQVyVbI5T9zg1P4P6CTh4rJTyYefLb4nxB538mK56rGvlwYA/exec
 wolffang.son@telusinternational.com
+ jQuery("#oRightPaneContent").contents().find("#adherenceListWrapper .tblItem").each(function(index)
 EBG Raw*/
